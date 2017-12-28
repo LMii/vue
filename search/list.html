@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: "微软雅黑";
+        list-style: none;
+    }
+    body,html{
+        width: 100%;
+        height: auto;
+    }
+    header{
+        width: 640px;
+        height:40px;
+        margin: auto;
+    }
+    header>input{
+        width: 530px;
+        height: 100%;
+        border:1px solid #c0c0c0;
+        padding: 6px;
+        outline: none;
+        box-sizing: border-box;
+    }
+    .search{
+        float: right;
+        width: calc(100% - 530px);
+        height: 100%;
+        background: #347EF1;
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .root ul{
+        width: 530px;
+        height: auto;
+        margin: auto;
+        border: 1px solid #c0c0c0;
+        margin-left:355px;
+    }
+    .root ul>li{
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        border-bottom: 1px solid #ccc;
+    }
+    .root ul>li:last-of-type{
+        border-bottom: none;
+    }
+</style>
+<body>
+<div class="root">
+    <search :con="con" @increment="focus"></search>
+    <list :list-data="datas" :show="show" @increment="change"></list>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script src="components.js"></script>
+<script src="app.js"></script>
